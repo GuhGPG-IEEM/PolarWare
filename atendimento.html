@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atendimento - PolarWare</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <aside class="accessibility-menu">
+        <button id="high-contrast-btn" title="Alto Contraste"><i class="fas fa-adjust"></i></button>
+        <button id="font-increase-btn" title="Aumentar Fonte"><i class="fas fa-font"></i>+</button>
+        <button id="font-decrease-btn" title="Diminuir Fonte"><i class="fas fa-font"></i>-</button>
+    </aside>
+
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">PolarWare</a>
+            <div class="search-bar">
+                <input type="text" placeholder="O que você está procurando?">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="header-icons">
+                <div class="user-auth">
+                    <a href="login.html">Cadastre-se</a>
+                    <span>|</span>
+                    <a href="login.html">Conecte-se</a>
+                </div>
+
+                <div class="user-profile-container" style="display: none; align-items: center; gap: 15px;">
+                    </div>
+                
+                <a href="carrinho.html" class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul>
+                <li class="dropdown">
+                    <a href="#">Categorias <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Hardware</a></li>
+                        <li><a href="#">Monitores</a></li>
+                        <li><a href="#">Periféricos</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Promoções</a></li>
+                <li><a href="#">Monte seu PC</a></li>
+                <li><a href="atendimento.html">Atendimento</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container page-content">
+        <h1>Atendimento ao Cliente</h1>
+        <div class="atendimento-layout">
+            <section class="faq-section">
+                <h2>Perguntas Frequentes</h2>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Quais são as formas de pagamento aceitas?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Aceitamos as principais bandeiras de cartão de crédito (Visa, MasterCard, Amex), boleto bancário e PIX. O pagamento via PIX oferece 10% de desconto.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Como posso rastrear meu pedido?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Assim que seu pedido for despachado, você receberá um e-mail com o código de rastreamento e o link da transportadora. Você também pode acessar a seção "Meus Pedidos" em seu perfil.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Qual é a política de devolução?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Você pode solicitar a devolução de um produto em até 7 dias corridos após o recebimento, desde que o produto esteja em sua embalagem original e sem sinais de uso. Entre em contato conosco para iniciar o processo.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="contact-form-section">
+                <h2>Envie uma Mensagem</h2>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="contactName">Nome</label>
+                        <input type="text" id="contactName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactEmail">E-mail</label>
+                        <input type="email" id="contactEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactSubject">Assunto</label>
+                        <input type="text" id="contactSubject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactMessage">Mensagem</label>
+                        <textarea id="contactMessage" rows="6" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Enviar Mensagem</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 PolarWare - Todos os direitos reservados.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="auth.js"></script>
+</body>
+</html>
